@@ -1,3 +1,4 @@
+echo "<h1>New Version on Port 9999</h1>" >> src/app/app.component.html
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Try to add you score</h1>
@@ -5,7 +6,9 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6"><label for="staticEmail2">请输入你的分数:</label>
+<input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter your score">
+
       <form class="form-inline">
           <div class="form-group mb-2">
             <label for="staticEmail2" class="sr-only"></label>

@@ -1,0 +1,9 @@
+# docker-compose-prod.yml
+version: '3.3'
+services:
+  frontend-new:  # 使用新服务名避免冲突
+    image: gaoyifeng123/234-deploylab-frontend:new-port  # 使用分支名作为标签
+    pull_policy: always
+    ports:
+      - "9999:80"  # 映射到 9999 端口
+    restart: unless-stopped
