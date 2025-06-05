@@ -81,7 +81,7 @@ jobs:
             echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
             
             # 分支判断部署
-            if [ "$GITHUB_REF_NAME" = "4.9new" ]; then
+            if [ "$GITHUB_REF_NAME" = "new-port" ]; then
               echo "Deploying to port 9999"
               docker compose -f docker-compose-prod.yml -p frontend-new down
               docker compose -f docker-compose-prod.yml -p frontend-new pull
