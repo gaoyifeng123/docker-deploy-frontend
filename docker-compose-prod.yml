@@ -6,4 +6,4 @@ services:
     pull_policy: always
     ports:
       - "9999:80"  # 映射到 9999 端口
-    restart: unless-stopped
+   
