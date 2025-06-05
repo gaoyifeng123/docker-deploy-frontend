@@ -44,7 +44,7 @@ jobs:
           script: |
             cd /home/ubuntu/frontend
             echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
-            docker compose down
-            docker compose pull
-            docker compose up -d
+            docker compose prod down
+            docker compose prod pull
+            docker compose prod up -d
             rm -rf /home/ubuntu/frontend
